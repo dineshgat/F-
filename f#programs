@@ -1,0 +1,226 @@
+//Swapping of two numbers
+open System
+let swap=
+printfn "Enter a number 1"
+let mutable a =int(Console.ReadLine())
+printfn "Enter number 2"
+let mutable b =int(Console.ReadLine())
+let temp=a
+a<=b
+b<-temp
+printfn"After swapping a:%d b%d" a b
+swap
+Console.Read()
+ 
+ 
+ *maximum of three numbers*
+ open System
+ printf "Enter number 1"
+ let a=int(Console.ReadLine())
+ printf"Enter Number 2"
+ let b=int(Console.ReadLine())
+ printf"Enter number 3"
+ let c=int(Console.ReadLine())
+ if a>>b && a>>c them
+    printfn"%d is max" a
+elif b>c then
+    printfn"%d is max" b
+else
+    printfn"%d is max" c
+ Console.Read()
+ 
+ 
+ //Factorial
+ 
+ open System
+ printfn"Enter a number"
+ let n = int(Console.ReadLine())
+ let mutable f=1
+ for i=1 to n do
+    f<-f*1
+printfn"Enter a factorial of number is: %d"f
+Console.Read()
+
+
+//perfect number
+
+open System
+let perfect()
+printf"Enter a number"
+let mutable num=int(Console.ReadLine())
+let mutable sum=0
+for i=1 to n-1 do
+    if num%i=0 then
+        sum=sum+i
+    if sum=num then
+        printfn "%d is perfect number"num
+perfect()
+Console.Read()
+
+//sum of digit
+
+open System 
+let sum()=
+    printfn"Enter the number"
+    let mutable n= int(Console.ReadLine())
+    let mutable sum=0
+    let mutable dig=0
+    while(n>0)do
+        dig<-n%10
+        sum<-sum+dig
+        n<-n/10
+    printfn"Number of digit is %d"sum    
+sum()
+Console.ReadLine()
+
+//prime number
+open System
+let prime()=
+    let mutable flag=false
+    let mutable i=1
+    while(i<100)do
+        flag<-false
+        for j=2 to i/2 do
+            if i%j=0 then
+                flag <-true
+            if flag=false then
+                printfn "%d"i
+            i<-i+1
+prime()
+Console.ReadLine()
+
+//palindrome
+
+open System
+printfn"Enter a number"
+let mutable n = int(Console.ReadLine()) 
+let mutable reverse=0
+let no =n
+while n<>0 do
+    reverse <- reverse*10
+    reverse <- Reverse +n%10
+    n<-n/10
+if no = reverse then
+    printfn"%d is palindrome"no
+else
+    printfn"%d is not a palindrome"no
+Console.Read() 
+
+//fibonacci
+
+open System
+printfn"Enter a number"
+let n = int(Console.ReadLine()) 
+printfn "Fibonacci Series of %d numbers:"n
+
+let mutable n1=0
+let mutable n2=1
+let mytable temp=0
+printfn "%d"n1
+printfn"%d"n2
+for i=1 to n do
+    printfn"%d"(n1+n2)
+    temp<-n2
+    n2<-n1+n2
+    n1<-temp
+Console.Read()    
+
+
+//print the pattern
+1
+3 5
+7 9 11
+
+
+open system
+printfn"Enter a Number"
+let n=int(Console.ReadLine())
+printfn "Pattern %d lines:"n
+let mutable k=1
+for i=1 to n do
+    for j=1 to i do
+        printfn "%d"k
+        k<-k+2
+    printfn""
+Console.Read()    
+
+
+//Factorial using Recursion
+
+open system
+printfn"Enter a Number"
+let n=int(Console.ReadLine())
+
+let rec recFact no:int=
+    if n=0 ||n=1 then
+        1
+    else
+        no*recfact(no-1)
+let fact = recFact n
+printfn"Factorial of %d is %d" n fact 
+Console.ReadLine()    
+
+
+//sum of digits using recursion
+
+open system
+printfn"Enter a Number"
+let n=int(Console.ReadLine())
+
+let mutable sum=0
+let mutable n=0
+let sumOfDigits(no:int):int
+    num<-no
+    while(num<>0)do
+        sum<- sum+num%10
+        num<- num/10
+    sum
+let ans= sumOfDigits n
+printfn "Sum of %d is %d"n ans
+
+Console.ReadLine()  
+
+//calculate sum of array elements
+
+open System
+
+(*let array1 = [|for i in 1..10->1|]
+let getArraySum arr :int 32=
+    let mutable sum =0
+    printfn"Array of Elements are as follows:"
+    for i in 0..array1.Length-1 do
+        printfn"%i "array1.[i]
+        sum<-sum+array1.[i]
+    sum
+let ans=getArraySum array1
+printfn"\nSum is %i" ans*)
+
+//find max elements from array
+
+open System
+
+(*let array1 = [|for i in 1..10->1|]
+let getArraySum arr :int 32=
+    let mutable sum =0
+    printfn"Array of Elements are as follows:"
+    for i in 0..array1.Length-1 do
+        printfn"%i "array1.[i]
+        sum<-sum+array1.[i]
+    sum
+let ans=getArraySum array1
+printfn"\nSum is %i" ans*)
+
+//print reverse elements of array
+
+open System
+
+(*let array1 = [|for i in 1..10->1|]
+let getArraySum arr :int 32=
+    let mutable sum =0
+    printfn"Array of Elements are as follows:"
+    for i in 0..array1.Length-1 do
+        printfn"%i "array1.[i]
+        sum<-sum+array1.[i]
+    sum
+let ans=getArraySum array1
+printfn"\nSum is %i" ans*)
