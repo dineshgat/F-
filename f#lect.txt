@@ -1,0 +1,108 @@
+(*open System
+type student( )=
+    class
+    let mutable rno=0
+    let mutable name=""
+    member s.accept( )=
+        printf"enter rno \n"
+        rno<-int(Console.ReadLine())
+        printf"Enter name\n"
+        name<-Console.ReadLine()
+    member s.disp( )=
+        printfn"Rno is %d"rno
+        printfn"Name is %s"name
+end
+
+let obj=new student( )
+obj.accept( )
+obj.disp( )
+Console.Read()
+
+
+//wap to accept employee id,name,salary from the user and initialize it using constructor
+open System
+
+type employee(id,nm,sal )=
+    class
+    let mutable id=id
+    let mutable name=nm
+    let mutable salary=sal
+    member s.disp( )=
+        printfn"Id is %d"id
+        printfn"name is %s"name
+        printfn"Salary is %d"salary
+end
+
+let obj=new employee(1,"Dinu",200000)
+obj.disp( )
+Console.Read() 
+
+
+
+
+
+open System
+type dept( ) as d=
+    class
+    let mutable dname=""
+    member d.accept( )=
+        printf"Enter the dept name\n"
+        dname<-Console.ReadLine()
+    member d.disp( )=
+        printfn"dname is %s"dname
+end
+
+type emp( ) as e=
+    class
+    inherit dept()
+    let mutable eid=0
+    let mutable ename=""
+    member e.accept1( )=
+        printf"Enter id\n"
+        eid<-int(Console.ReadLine())
+        printf"Enter name\n"
+        ename<-Console.ReadLine()
+    member e.disp1( )=
+        printfn"Id is %d"eid
+        printfn"Name is %s"ename
+
+
+end
+
+let obj=new emp()
+obj.accept()
+obj.disp()
+obj.accept1()
+obj.disp1()
+
+Console.Read()
+*)
+
+
+open System
+type dept( dn) as d=
+    class
+    let mutable dname=dn
+   
+    member d.disp( )=
+        printfn"dname is %s"dname
+end
+
+type emp(id,nm,dn ) as e=
+    class
+    inherit dept(dn)
+    let mutable eid=id
+    let mutable ename=nm
+   
+    member e.disp1( )=
+        base.disp()
+        printfn"Id is %d"eid
+        printfn"Name is %s"ename
+end
+
+let obj=new emp(10,"shree","c")
+obj.disp1()
+
+Console.Read()
+
+ 
