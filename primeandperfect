@@ -1,0 +1,43 @@
+open System
+
+printf"Enter value of n:"
+let mutable n=int(Console.ReadLine())
+let mutable k=0
+let mutable p=0
+let mutable primearray=Array.create n 0 
+let mutable perfectarray=Array.create n 0
+let mutable array=Array.create n 0
+for i in 0..n-1 do
+    array.[i]<-int(Console.ReadLine())
+
+
+for i in 0..array.Length-1 do
+    let mutable flag=false
+    let mutable n=array.[i]
+    for j=2 to n/2 do
+        if n%j=0 then
+            flag<-true
+    if flag<>true then
+        primearray.[k]<-n
+        k<-k+1
+
+for i in 0..array.Length-1 do
+    let mutable sum=0
+    let mutable num=array.[i]
+    for j=1 to num-1  do
+        if num%j=0 then
+            sum<-sum+j
+    if sum=num then 
+        perfectarray.[i]<-num
+        p<-p+1
+printf"Prime numbers are:\n"
+for i in 0..k-1 do
+    printfn"%d"primearray.[i]
+
+
+printf"Perfect numbers are:\n"
+for i in 0..p-1 do
+    printfn"%d"perfectarray.[i]
+
+
+Console.Read()
