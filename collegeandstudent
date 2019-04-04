@@ -1,0 +1,63 @@
+open System
+type college( )=
+    class
+    let mutable cid=0
+    let mutable cname=""
+    member c.accept( )=
+        printf"enter id\n"
+        cid<-int(Console.ReadLine())
+        printf"enter class name\n"
+        cname<-Console.ReadLine()
+    member c.display( )=
+        printfn"Cid is:%d"cid
+        printfn"cname is:%s"cname
+end
+
+type student( )=
+    class
+    inherit college()
+    let mutable rno=0
+    let mutable name=""
+    let mutable age=0
+    member s.accept1( )=
+        base.accept()
+        printf"enter rno\n"
+        rno<-int(Console.ReadLine())
+        printf"enter  name\n"
+        name<-Console.ReadLine()
+        printf"enter age\n"
+        age<-int(Console.ReadLine())
+    member s.display1( )=
+        base.display()
+        printfn"Rno is:%d"rno
+        printfn"Name is:%s"name
+        printfn"Age is:%d"age
+    end
+
+
+type result( )=
+    class
+    inherit student()
+    let mutable f=0
+    let mutable c=0
+    member r.accept2( )=
+        base.accept1()
+        printf"Enter marks r\n:"
+        f<-int(Console.ReadLine())
+        printf"enter marks c:"
+        c<-int(Console.ReadLine())
+        printf"\n\n\n\n"
+    member r.display2( )=
+        base.display1()
+        printfn"R marks are:%d"f
+        printfn"C marks are:%d"c
+    end
+let obj=new result()
+obj.accept2()
+obj.display2()
+
+Console.Read()
+
+
+
+    
