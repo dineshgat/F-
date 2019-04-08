@@ -1,0 +1,53 @@
+*wap to accept string from user and perform following functions
+    print reverse of string 
+    copy one string into another
+    concate one string with another
+    find length of the string
+    print alternate character from string
+    
+    open System
+
+    printfn"Enter the string:"
+    let mutable string=Console.ReadLine()
+    let res=String.length string
+    printfn"length of string is %d"res
+
+    open System
+
+    printf"Enter the string1:"
+    let mutable string1=Console.ReadLine()
+    printf"Enter the string2:"
+    let mutable string2=Console.ReadLine()
+    let mutable res=String.Concat(string1,string2)
+    printfn"%s"res
+    
+
+
+    open System
+    printf"Enter the string1:"
+    let mutable string1=Console.ReadLine()
+    let mutable string2=String.Copy(string1)
+    printfn"%s"string2
+    
+
+
+    open System
+    printf"Enter the string1:"
+    let mutable string1=Console.ReadLine()
+    let res=String.length string1
+    printf"Reverse string is:\n"
+    for i=res-1 downto 0 do
+        printf"%c"string1.[i]
+
+   
+
+
+    open System
+    printf"Enter the string1:"
+    let mutable string1=Console.ReadLine()
+    let res=String.length string1
+    printf"Alternate characters are:\n"
+    for i in 0..2..res-1 do
+        printf"%c"string1.[i]
+
+    Console.Read()
